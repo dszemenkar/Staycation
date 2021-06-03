@@ -1,0 +1,19 @@
+﻿@page "/ParentComponent"
+<h3 class="text-danger">Parent Child Component</h3>
+
+
+<ChildComponent OnClickBtnMethod="ShowMessage" Title="This is the child component!">
+    David skriver lite här.
+
+</ChildComponent>
+
+<p><b>@messageText</b></p>
+
+@code {
+    private string messageText = "";
+
+    private void ShowMessage(MouseEventArgs e)
+    {
+        messageText = "What happened?";
+    }
+}
